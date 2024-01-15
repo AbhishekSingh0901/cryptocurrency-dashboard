@@ -3,6 +3,7 @@ import React from "react";
 import DataChart from "./Chart.component";
 import MarketCapList from "../features/marketCap/MarketCapList.component";
 import Portfolio from "../features/portfolio/Portfolio.component";
+import ExchangeValues from "../features/exchangeValues/ExchangeValues.component";
 
 function Dashboard() {
   return (
@@ -19,7 +20,7 @@ function Dashboard() {
           alt=""
         />
       </div>
-      <div className="row-span-2 bg-white bg-gradient-to-br from-cyan-400 to-blue-400 bg rounded-2xl"></div>
+      <ExchangeValues />
     </section>
   );
 }
