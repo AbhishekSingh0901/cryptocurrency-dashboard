@@ -12,7 +12,6 @@ function Portfolio() {
   const { data, isLoading } = useQuery({
     queryKey: ["portfolio"],
     queryFn: getPortfolio,
-    staleTime: 60000,
   });
   // const dataSet = data.map((val) => val.martket_cap);
   // const labelSet = data.map((val) => val.name);
@@ -29,7 +28,7 @@ function Portfolio() {
         (cap, acc) => cap + acc,
         0
       );
-      console.log(retreivedData, retreivedLabels);
+      // console.log(retreivedData, retreivedLabels);
       setDataSet(retreivedData);
       setLabelSet(retreivedLabels);
       setTotalVolume(retreivedTotalVolume);
