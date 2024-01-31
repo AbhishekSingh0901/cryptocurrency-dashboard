@@ -1,4 +1,4 @@
-function Navbar() {
+function Navbar({ setSearchCoin }) {
   return (
     <nav className="py-2 px-6 bg-white border-b-2 border-gray-100 mb-12 flex flex-row gap-16">
       <div className="flex flex-row">
@@ -10,8 +10,9 @@ function Navbar() {
       <div className="flex flex-row justify-between w-full">
         <input
           type="text"
-          className="rounded-full px-4 py-2 bg-gray-100"
+          className="rounded-full px-4 py-2 bg-gray-100 active:outline-1 outline-cyan-400"
           placeholder="Seach by coin"
+          onChange={(e) => setSearchCoin(e.target.value)}
         />
         <select className=" rounded-full px-6 py-2  bg-gray-100">
           <option>USD</option>
