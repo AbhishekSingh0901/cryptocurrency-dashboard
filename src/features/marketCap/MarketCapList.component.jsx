@@ -3,21 +3,24 @@ import MarketCap from "./MarketCap";
 import { getMarketCap } from "../../services/apiMarketCap";
 import { useEffect, useState } from "react";
 
-function MarketCapList({ searchCoin }) {
+function MarketCapList({ searchCoin, curr }) {
   const [marketData, setMarketData] = useState([]);
-  useEffect(function () {
-    const fetchData = async () => {
-      try {
-        // Assuming getMarketCap returns a promise
-        const data = await getMarketCap("usd");
-        setMarketData(data);
-      } catch (error) {
-        console.error("Error fetching market data:", error);
-      }
-    };
+  useEffect(
+    function () {
+      const fetchData = async () => {
+        try {
+          // Assuming getMarketCap returns a promise
+          const data = await getMarketCap(curr);
+          setMarketData(data);
+        } catch (error) {
+          console.error("Error fetching market data:", error);
+        }
+      };
 
-    fetchData();
-  }, []);
+      fetchData();
+    },
+    [curr]
+  );
   // const { isLoading, data: marketData } = useQuery({
   //   queryKey: ["marketCap"],
   //   queryFn: getMarketCap,

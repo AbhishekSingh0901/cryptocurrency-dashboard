@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 //Portfolio component shows the Major crypto currency in pia chart format
-function Portfolio() {
+function Portfolio({ curr }) {
   // const [totalValume, setTotalValume] = useState("");
   const { data, isLoading } = useQuery({
-    queryKey: ["portfolio"],
-    queryFn: getPortfolio,
+    queryKey: ["portfolio", curr],
+    queryFn: () => getPortfolio(curr),
   });
   // const dataSet = data.map((val) => val.martket_cap);
   // const labelSet = data.map((val) => val.name);

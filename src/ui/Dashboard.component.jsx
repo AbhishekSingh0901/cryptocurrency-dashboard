@@ -5,15 +5,15 @@ import MarketCapList from "../features/marketCap/MarketCapList.component";
 import Portfolio from "../features/portfolio/Portfolio.component";
 import ExchangeValues from "../features/exchangeValues/ExchangeValues.component";
 
-function Dashboard({ searchCoin }) {
+function Dashboard({ searchCoin, curr }) {
   return (
     <section className="max-w-7xl mx-auto h-5/6 md:gap-4 gap-9 grid grid-cols-3 grid-rows-5 m-6">
       <div className=" row-span-3 bg-white col-span-2 shadow-md hover:shadow-lg rounded-2xl transition-all duration-200 p-6">
-        <DataChart />
+        <DataChart curr={curr} />
       </div>
-      <MarketCapList searchCoin={searchCoin} />
+      <MarketCapList curr={curr} searchCoin={searchCoin} />
       <div className=" relative row-span-2 bg-white shadow-md hover:shadow-lg rounded-2xl transition-all duration-200 flex justify-center items-center">
-        <Portfolio />
+        <Portfolio curr={curr} />
         <img
           className="absolute h-40 -bottom-4 -left-12"
           src="/money.png"

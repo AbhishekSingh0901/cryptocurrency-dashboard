@@ -7,12 +7,13 @@ const queryClient = new QueryClient();
 
 function App() {
   const [searchCoin, setSearchCoin] = useState("");
-  console.log(searchCoin);
+  const [curr, setCurr] = useState("usd");
+  console.log(curr);
   return (
     <QueryClientProvider client={queryClient}>
       <div className="h-screen bg-gray-50">
-        <Navbar setSearchCoin={setSearchCoin} />
-        <Dashboard searchCoin={searchCoin} />
+        <Navbar curr={curr} setCurr={setCurr} setSearchCoin={setSearchCoin} />
+        <Dashboard curr={curr} searchCoin={searchCoin} />
       </div>
     </QueryClientProvider>
   );

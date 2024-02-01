@@ -67,11 +67,11 @@ function reducer(state, action) {
   }
 }
 
-function DataChart() {
+function DataChart({ curr }) {
   const [{ id, interval, days }, dispatch] = useReducer(reducer, initialState);
   const { data, isLoading, error } = useQuery({
-    queryKey: ["chartData", id, interval, days],
-    queryFn: () => getChartData({ curr: "usd", id, interval, days }),
+    queryKey: ["chartData", id, interval, days, curr],
+    queryFn: () => getChartData({ curr, id, interval, days }),
   });
 
   console.log(id, interval, days);

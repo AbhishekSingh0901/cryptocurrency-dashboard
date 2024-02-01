@@ -1,7 +1,7 @@
-export async function getPortfolio(curr = "usd") {
+export async function getPortfolio(curr) {
   try {
     const res = await fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=tether%2Cethereum%2Cbinancecoin&order=market_cap_desc`
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${curr}&ids=tether%2Cethereum%2Cbinancecoin&order=market_cap_desc`
     );
     // console.log(res);
     if (!res.ok) {
