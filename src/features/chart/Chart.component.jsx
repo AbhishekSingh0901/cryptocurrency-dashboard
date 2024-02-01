@@ -180,7 +180,7 @@ function DataChart({ curr }) {
               pointBorderColor: "transparent",
               pointBorderWidth: 3,
               pointRadius: 2,
-              label: `${id} in USD`,
+              label: `${id} in ${curr.toUpperCase()}`,
               data: chartData.map((val) => val.y),
             },
           ],
