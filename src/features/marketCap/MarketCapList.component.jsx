@@ -31,7 +31,7 @@ function MarketCapList({ searchCoin, curr }) {
     : marketData;
   console.log(filteredMarketCap);
   return (
-    <div className="relative md:row-span-2 lg:row-span-5 bg-white shadow-md hover:shadow-lg rounded-2xl transition-all duration-200 overflow-y-scroll">
+    <div className="relative h-[400px] lg:h-full col-span-2 lg:col-span-1 lg:row-span-5 bg-white shadow-md hover:shadow-lg rounded-2xl transition-all duration-200 overflow-y-scroll">
       {filteredMarketCap?.map((data) => (
         <MarketCap key={data.id} data={data} />
       ))}
