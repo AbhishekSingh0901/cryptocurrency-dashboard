@@ -85,8 +85,8 @@ function DataChart({ curr }) {
 
   return (
     <div className="w-full lg:h-full h-[400px] pb-8">
-      <div className=" flex items-center justify-between">
-        <div className="flex gap-2">
+      <div className="flex items-center justify-between">
+        <div className="md:flex gap-2">
           <ButtonInterval
             interval="1D"
             onClick={() => {

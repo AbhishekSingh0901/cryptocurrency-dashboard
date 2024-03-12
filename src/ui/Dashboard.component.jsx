@@ -7,7 +7,7 @@ import ExchangeValues from "../features/exchangeValues/ExchangeValues.component"
 
 function Dashboard({ searchCoin, curr }) {
   return (
-    <section className="max-w-7xl mx-auto lg:h-5/6 md:gap-4 gap-9 grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 lg:grid-rows-5 m-6">
+    <section className="max-w-7xl mx-auto lg:h-5/6 md:gap-4 grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 lg:grid-rows-5 m-6">
       <div className=" row-span-3 bg-white col-span-1 md:col-span-2 shadow-md hover:shadow-lg rounded-2xl transition-all duration-200 p-6">
         <DataChart curr={curr} />
       </div>

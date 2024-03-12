@@ -2,8 +2,8 @@ function Navbar({ setSearchCoin, curr, setCurr }) {
   return (
     <nav className="py-2 px-6 bg-white border-b-2 border-gray-100 mb-10 flex flex-row gap-16">
       <div className="flex flex-row">
-        <img src="/bitpile.png" srcSet="" alt="logo" className="h-12" />
-        <h2 className="p-2 text-2xl font-medium z-10 -ml-4">
+        <img src="/bitpile.png" srcSet="" alt="logo" className=" h-9 md:h-12" />
+        <h2 className="p-2 text-lg md:text-2xl font-medium z-10 -ml-4">
           Crypto<span className="text-cyan-500 ">Track</span>
         </h2>
       </div>
