@@ -37,7 +37,7 @@ function Portfolio({ curr }) {
 
   return (
     <>
-      <div className="w-4/5">
+      <div className="w-4/5 h-64">
         <Pie
           data={{
             labels: labelSet,
@@ -62,6 +62,7 @@ function Portfolio({ curr }) {
           }}
           options={{
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
               legend: {
                 display: true,

@@ -29,7 +29,6 @@ function MarketCapList({ searchCoin, curr }) {
   const filteredMarketCap = searchCoin
     ? marketData.filter((data) => data.id.includes(searchCoin.toLowerCase()))
     : marketData;
-  console.log(filteredMarketCap);
   return (
     <div className="relative h-[400px] lg:h-full col-span-2 lg:col-span-1 lg:row-span-5 bg-white shadow-md hover:shadow-lg rounded-2xl transition-all duration-200 overflow-y-scroll">
       {filteredMarketCap?.map((data) => (

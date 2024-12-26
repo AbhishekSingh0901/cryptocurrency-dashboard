@@ -1,5 +1,5 @@
 function ButtonInterval({ interval, selected = false, onClick }) {
-  const className = `px-3 py-1 rounded-lg ${
+  const className = `px-3 py-1 rounded-lg md:text-base text-sm ${
     selected
       ? "bg-cyan-500 text-white hover:bg-cyan-600"
       : "bg-gray-100 hover:bg-gray-200"

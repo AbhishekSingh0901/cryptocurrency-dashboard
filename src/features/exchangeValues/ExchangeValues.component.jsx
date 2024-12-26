@@ -30,7 +30,7 @@ function ExchangeValues() {
     setbuyCurrencyAmount(0);
   }
   return (
-    <div className="grid grid-cols-3 gap-x-2 gap-y-4 bg-gradient-to-br from-blue-700 to-cyan-500 bg rounded-2xl p-4">
+    <div className="grid grid-cols-3 gap-x-2 gap-y-4 bg-gradient-to-br from-blue-700 to-cyan-500 bg rounded-2xl p-4 md:px-40 lg:px-4">
       <p className="border-b text-red-400 border-b-red-400 text-2xl font-medium  col-span-3">
         Sell
       </p>

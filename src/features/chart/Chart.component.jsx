@@ -74,7 +74,6 @@ function DataChart({ curr }) {
     queryFn: () => getChartData({ curr, id, interval, days }),
   });
 
-  console.log(id, interval, days);
   if (isLoading) return <Spinner />;
   if (error) return <p>Oops unable to get data</p>;
 
@@ -90,7 +89,6 @@ function DataChart({ curr }) {
           <ButtonInterval
             interval="1D"
             onClick={() => {
-              console.log("1 day data");
               dispatch({
                 type: actions.DAY_DATA,
               });
@@ -100,7 +98,6 @@ function DataChart({ curr }) {
           <ButtonInterval
             interval="7D"
             onClick={() => {
-              console.log("1 day data");
               dispatch({
                 type: actions.WEEK_DATA,
               });
@@ -110,7 +107,6 @@ function DataChart({ curr }) {
           <ButtonInterval
             interval="1M"
             onClick={() => {
-              console.log("1 day data");
               dispatch({
                 type: actions.MONTH_DATA,
               });
@@ -120,7 +116,6 @@ function DataChart({ curr }) {
           <ButtonInterval
             interval="6M"
             onClick={() => {
-              console.log("1 day data");
               dispatch({
                 type: actions.HALF_YEARLY_DATA,
               });
@@ -130,7 +125,6 @@ function DataChart({ curr }) {
           <ButtonInterval
             interval="1Y"
             onClick={() => {
-              console.log("1 day data");
               dispatch({
                 type: actions.YEAR_DATA,
               });
@@ -145,7 +139,7 @@ function DataChart({ curr }) {
               console.log(e.target.value);
               dispatch({ type: actions.SET_ID, payload: e.target.value });
             }}
-            className="px-3 py-1 outline-none border bg-gray-100 border-gray-200 rounded-lg"
+            className="px-3 py-1 outline-none border bg-gray-100 border-gray-200 rounded-lg text-sm md:text-base"
           >
             <option value="bitcoin">bitcoin</option>
             <option value="ethereum">ethereum</option>

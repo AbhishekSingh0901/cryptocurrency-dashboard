@@ -3,12 +3,18 @@ import Dashboard from "./ui/Dashboard.component";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { useState } from "react";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 60000,
+    },
+  },
+});
 
 function App() {
   const [searchCoin, setSearchCoin] = useState("");
   const [curr, setCurr] = useState("usd");
-  console.log(curr);
   return (
     <QueryClientProvider client={queryClient}>
       <div className="h-screen bg-gray-50">
